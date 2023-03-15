@@ -1,3 +1,13 @@
+// Go to blog
+function goToBlog() {
+  window.location.href = "./blog.html";
+};
+
+// Back to home
+function backToHome() {
+  window.location.href = "./index.html";
+};
+
 // global variable declaration
 let count = 0;
 let timer;
