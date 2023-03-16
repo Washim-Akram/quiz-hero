@@ -83,6 +83,15 @@
             Differences between map, forEach, filter and find array methods in
             JavaScript?
           </h2>
+          <p class="text-lg mb-4">
+            JavaScript map(), forEach(), filter() and find() methods are
+            iterable methods for iterate JS array element.Using these methods,
+            we are able to iterate an array, array of objects etc. and get the
+            specific value. In the se methods some are return an array and some
+            are return undefined. But these all methods are not change the
+            original array. In following, we are discuss the differences between
+            map, forEach, filter and find array methods in JavaScript.
+          </p>
           <table>
             <tr>
               <th>map()</th>
@@ -121,6 +130,13 @@
           <h2 class="text-2xl italic mb-4">
             Differences between Local Storage, Session Storage and Cookies.
           </h2>
+          <p class="text-lg mb-4">
+            The Local Storage, Session Storage, and Cookies are the browser
+            API(Application Programming Interface). These are not JS methods. In
+            the .js file, we do not find these methods. Now, we are discuss
+            about the main differences between browsers localStorage,
+            sessionStorage and cookies APIs.
+          </p>
           <table>
             <tr>
               <th>Local Storage</th>
@@ -165,38 +181,83 @@
             style="background-color: whitesmoke"
           >
             <p>
-              There is some javascript code hanging out with your favorite code
-              editor. We know by this point that JS Engine and the call stack
-              are the primary things responsible for running the javascript
-              code. In order for the code to be executed, it has to be brought
-              on the call stack for JS Engine to execute it. Now recall the
-              callback function in the example above. Last we heard of it was
-              when it was in some fancy new memory unit called the callback
-              queue. After 10 seconds have passed, it has to be executed. Event
-              loop in JavaScript is such a mechanism which handles this. This
-              means it manages the lifecycle of a callback function from the
-              callback queue to the call stack. Whenever you read about the
-              event loop in javascript next, think of it as a mechanism more
-              than anything else.
+              JavaScript is JIT Compiled, Multi-Paradigm, prototyped-based
+              Programming Language. JavaScript is "Single Threaded" and
+              synchronous Programming Language by nature. Single Threaded means
+              only one statement is executed at a time. JavaScript only has one
+              call stack. JavaScript runs code line by line. Must finish
+              executing a piece of code before moving onto the next.
+              <br />
+              But also JavaScript Smoothly handled asynchronous behaviour and
+              workflow. JavaScript has a mechanism that handled asynchronous
+              workflow and callback function and stack and queue is called event
+              loop. Its a Js model and mechanism to handle executing the code,
+              processing events and handle and executing the callback
+              functions(stack and queue).
             </p>
             <p>
-              But How does it work? Let's begin by stating the universal truth -
-              “A call stack will have to be empty for the event loop to bring
-              anything in it”. Whenever the call stack is empty, the first
-              entered unit in the callback queue is brought to the call stack by
-              the event loop which was observing both the call stack and
-              callback queue. Did You Notice? setTimeout of an 'n' seconds does
-              not guarantee execution exactly when 'n' seconds have passed,
-              rather it guarantees a minimum delay of 'n'. This is because after
-              a defined limit, the callback function moves to the callback queue
-              (stating ready for execution) where the event loop is supposed to
-              pick it for actual execution. A very interesting piece of
-              information event loop in javascript is an event loop does not
-              block. Operations that might potentially require waiting are
-              performed using callbacks and events.
+              When there are tasks in the call stack, they are going to be
+              executed and therefore the call stack is empty. when the call
+              stack is empty, the event loop is going to check if there is any
+              task in the queue(event queue, scheduled queue, microtask queue).
+              If there is a task in the event queue, the event loop pass the
+              task. if there is not a task in the event queue, the event loop is
+              going to see on the scheduled queue, if there's a task scheduled,
+              the event loop will pass that task. then, it's going to see if
+              there's a task in the microtask queue, if there's a task, the
+              event loop will pass the task.
             </p>
           </div>
         </article>
+      </section>
+
+      <section class="w-9/12 mx-auto my-10">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <article>
+            <h2 class="text-2xl italic mb-4">
+              What is event loop? How does it work?
+            </h2>
+            <div class="p-4 text-justify rounded-lg text-lg bg-gray-200">
+              <p>
+                There is some javascript code hanging out with your favorite
+                code editor. We know by this point that JS Engine and the call
+                stack are the primary things responsible for running the
+                javascript code. In order for the code to be executed, it has to
+                be brought on the call stack for JS Engine to execute it. Now
+                recall the callback function in the example above. Last we heard
+                of it was when it was in some fancy new memory unit called the
+                callback queue. After 10 seconds have passed, it has to be
+                executed. Event loop in JavaScript is such a mechanism which
+                handles this. This means it manages the lifecycle of a callback
+                function from the callback queue to the call stack. Whenever you
+                read about the event loop in javascript next, think of it as a
+                mechanism more than anything else.
+              </p>
+            </div>
+          </article>
+          <article>
+            <h2 class="text-2xl italic mb-4">
+              What is event loop? How does it work?
+            </h2>
+            <div class="p-4 text-justify rounded-lg text-lg bg-gray-200">
+              <p>
+                There is some javascript code hanging out with your favorite
+                code editor. We know by this point that JS Engine and the call
+                stack are the primary things responsible for running the
+                javascript code. In order for the code to be executed, it has to
+                be brought on the call stack for JS Engine to execute it. Now
+                recall the callback function in the example above. Last we heard
+                of it was when it was in some fancy new memory unit called the
+                callback queue. After 10 seconds have passed, it has to be
+                executed. Event loop in JavaScript is such a mechanism which
+                handles this. This means it manages the lifecycle of a callback
+                function from the callback queue to the call stack. Whenever you
+                read about the event loop in javascript next, think of it as a
+                mechanism more than anything else.
+              </p>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
 
