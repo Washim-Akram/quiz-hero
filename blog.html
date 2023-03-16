@@ -215,45 +215,39 @@
         <div class="flex flex-col md:flex-row items-center gap-8">
           <article>
             <h2 class="text-2xl italic mb-4">
-              What is event loop? How does it work?
+              What is the "Function" of the quizTimer()_function inside the
+              noChange.js file?
             </h2>
             <div class="p-4 text-justify rounded-lg text-lg bg-gray-200">
               <p>
-                There is some javascript code hanging out with your favorite
-                code editor. We know by this point that JS Engine and the call
-                stack are the primary things responsible for running the
-                javascript code. In order for the code to be executed, it has to
-                be brought on the call stack for JS Engine to execute it. Now
-                recall the callback function in the example above. Last we heard
-                of it was when it was in some fancy new memory unit called the
-                callback queue. After 10 seconds have passed, it has to be
-                executed. Event loop in JavaScript is such a mechanism which
-                handles this. This means it manages the lifecycle of a callback
-                function from the callback queue to the call stack. Whenever you
-                read about the event loop in javascript next, think of it as a
-                mechanism more than anything else.
+                The quizTimer() function takes a parameter named "dismiss".
+                Inside the function it sets a variable named "timer" which is
+                contains a setInterval method that takes a function and a delay
+                parameter, which is 1000ms/1s. The main function of this
+                function is to handle quizTimer. When quizTimer() function is
+                called by a truthy value, its called the clearInterval() method
+                and clear the interval(timer). and return from the function.
               </p>
             </div>
           </article>
           <article>
             <h2 class="text-2xl italic mb-4">
-              What is event loop? How does it work?
+              What is the "Function" of the chooseQuiz()_function inside the
+              noChange.js file?
             </h2>
             <div class="p-4 text-justify rounded-lg text-lg bg-gray-200">
               <p>
-                There is some javascript code hanging out with your favorite
-                code editor. We know by this point that JS Engine and the call
-                stack are the primary things responsible for running the
-                javascript code. In order for the code to be executed, it has to
-                be brought on the call stack for JS Engine to execute it. Now
-                recall the callback function in the example above. Last we heard
-                of it was when it was in some fancy new memory unit called the
-                callback queue. After 10 seconds have passed, it has to be
-                executed. Event loop in JavaScript is such a mechanism which
-                handles this. This means it manages the lifecycle of a callback
-                function from the callback queue to the call stack. Whenever you
-                read about the event loop in javascript next, think of it as a
-                mechanism more than anything else.
+                The chooseQuiz() function takes two parameters named "index" and
+                "givenAns". Inside the function it sets a variable named
+                "isExist" which is select conditionally specific item using id.
+                After that, the function check if the "isExist" value is truthy,
+                then it loop through between quiz and answers.Inside the
+                for...of loop it again check isExist and quiz id and splice
+                answers. if "isExist" not full filled the condition then
+                quizData using index and givenAns push to the answers array
+                which is declared globally in another file called index.js. At
+                the bottom the function called another function displayAnswers
+                using a parameter answers.
               </p>
             </div>
           </article>
