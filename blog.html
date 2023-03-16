@@ -31,8 +31,32 @@
         },
       };
     </script>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      th {
+        background-color: gray;
+        color: white;
+      }
+      td {
+        font-size: 18px;
+      }
+    </style>
   </head>
-  <body class="bg-white font-common">
+  <body class="bg-white">
     <!-- Header/Navbar section start -->
     <header class="h-16 flex items-center shadow-sm">
       <nav class="flex justify-between items-center w-9/12 mx-auto">
@@ -51,6 +75,130 @@
       </nav>
     </header>
     <!-- Header/Navbar section end -->
+
+    <main>
+      <section class="w-9/12 mx-auto my-10">
+        <article class="mb-8">
+          <h2 class="text-2xl italic mb-4">
+            Differences between map, forEach, filter and find array methods in
+            JavaScript?
+          </h2>
+          <table>
+            <tr>
+              <th>map()</th>
+              <th>forEach()</th>
+              <th>filter()</th>
+              <th>find()</th>
+            </tr>
+            <tr>
+              <td>Input: The map() method takes an array as an input.</td>
+              <td>Input: The forEach() method takes an array as an input.</td>
+              <td>Input: The filter() method takes an array as an input.</td>
+              <td>Input: The find() method takes an array as an input.</td>
+            </tr>
+            <tr>
+              <td>Return Value: An Array.</td>
+              <td>Return Value: Undefined.</td>
+              <td>Return Value: An Array.</td>
+              <td>Return Value: Single Value. Not an Array.</td>
+            </tr>
+            <tr>
+              <td>If Result is Empty: Return Empty Array[].</td>
+              <td>If Result is Empty: Return Undefined.</td>
+              <td>If Result is Empty: Return Empty Array[].</td>
+              <td>If Result is Empty: Return Undefined.</td>
+            </tr>
+            <tr>
+              <td>Original Array: Not Modified</td>
+              <td>Original Array: Not Modified</td>
+              <td>Original Array: Not Modified</td>
+              <td>Original Array: Not Modified</td>
+            </tr>
+          </table>
+        </article>
+
+        <article class="mb-8">
+          <h2 class="text-2xl italic mb-4">
+            Differences between Local Storage, Session Storage and Cookies.
+          </h2>
+          <table>
+            <tr>
+              <th>Local Storage</th>
+              <th>Session Storage</th>
+              <th>Cookies</th>
+            </tr>
+            <tr>
+              <td>Capacity: The local storage capacity is 5MB/10MB</td>
+              <td>Capacity: The session storage capacity is 5MB</td>
+              <td>Capacity: The storage capacity of Cookies is 4KB</td>
+            </tr>
+            <tr>
+              <td>Expiration Date: Has no expiration date .</td>
+              <td>
+                Expiration Date: Data is automatically removed when user close
+                the browser tab
+              </td>
+              <td>Expiration Date: Has different expiration dates.</td>
+            </tr>
+            <tr>
+              <td>Position: Client Site Only.</td>
+              <td>Position: Client Site Only.</td>
+              <td>
+                Position: Client and Server Both Site. But User Cannot Access
+                the Cookies.
+              </td>
+            </tr>
+            <tr>
+              <td>SSL(Secure Sockets Layer) Support: Has No SSL Support.</td>
+              <td>SSL(Secure Sockets Layer) Support: Has No SSL Support.</td>
+              <td>SSL(Secure Sockets Layer) Support: Has SSL Support.</td>
+            </tr>
+          </table>
+        </article>
+
+        <article>
+          <h2 class="text-2xl italic mb-4">
+            What is event loop? How does it work?
+          </h2>
+          <div
+            class="p-4 text-justify rounded-lg text-lg"
+            style="background-color: whitesmoke"
+          >
+            <p>
+              There is some javascript code hanging out with your favorite code
+              editor. We know by this point that JS Engine and the call stack
+              are the primary things responsible for running the javascript
+              code. In order for the code to be executed, it has to be brought
+              on the call stack for JS Engine to execute it. Now recall the
+              callback function in the example above. Last we heard of it was
+              when it was in some fancy new memory unit called the callback
+              queue. After 10 seconds have passed, it has to be executed. Event
+              loop in JavaScript is such a mechanism which handles this. This
+              means it manages the lifecycle of a callback function from the
+              callback queue to the call stack. Whenever you read about the
+              event loop in javascript next, think of it as a mechanism more
+              than anything else.
+            </p>
+            <p>
+              But How does it work? Let's begin by stating the universal truth -
+              “A call stack will have to be empty for the event loop to bring
+              anything in it”. Whenever the call stack is empty, the first
+              entered unit in the callback queue is brought to the call stack by
+              the event loop which was observing both the call stack and
+              callback queue. Did You Notice? setTimeout of an 'n' seconds does
+              not guarantee execution exactly when 'n' seconds have passed,
+              rather it guarantees a minimum delay of 'n'. This is because after
+              a defined limit, the callback function moves to the callback queue
+              (stating ready for execution) where the event loop is supposed to
+              pick it for actual execution. A very interesting piece of
+              information event loop in javascript is an event loop does not
+              block. Operations that might potentially require waiting are
+              performed using callbacks and events.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
 
     <!-- Footer section start -->
     <footer class="py-10 text-center text-sm">
